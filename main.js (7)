@@ -1,0 +1,20 @@
+// Array of 5 intern objects with scores
+const interns = [
+  { name: "Jenifer", scores: [80, 75, 90, 85, 88] },
+  { name: "John", scores: [60, 70, 65, 75, 68] },
+  { name: "Mary", scores: [95, 92, 90, 93, 94] },
+  { name: "Tunde", scores: [70, 85, 78, 80, 82] },
+  { name: "Amaka", scores: [88, 84, 90, 87, 85] }
+];
+
+// Function to calculate average score
+function calculateAverage(scores) {
+  const total = scores.reduce((sum, score) => sum + score, 0);
+  return (total / scores.length).toFixed(2);
+}
+
+// Loop through array and log results
+interns.forEach(intern => {
+  const avg = calculateAverage(intern.scores);
+  console.log(`${intern.name}'s average score: ${avg}`);
+});
